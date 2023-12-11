@@ -178,7 +178,7 @@ class AudioClassifierApp:
         # Make prediction using the loaded model and extracted features
         print("Predicting...")
         audio_path = 'recorded_audio.wav'
-        self.model = keras.models.load_model('best_model1_weights.h5')
+        self.model = keras.models.load_model('cnn.h5')
         if audio_path and hasattr(self, 'model'):
             features = self.get_features(audio_path)
             standardized_input_feature = self.scaler.transform(features)
